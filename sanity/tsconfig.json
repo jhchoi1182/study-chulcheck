@@ -19,9 +19,9 @@
     "**/*.ts",
     "**/*.tsx",
     "schemas/room.ts",
-    "schemas/StudyRecord.ts",
+    "schemas/studyRecord.ts",
     "schemas/user.ts",
-    "schemas/WeeklyRecord.ts"
+    "schemas/weeklyRecord.ts"
   ],
   "exclude": ["node_modules"]
 }

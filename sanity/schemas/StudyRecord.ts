@@ -1,4 +1,4 @@
-import {Rule} from '@sanity/types'
+// sanity\schemas\studyRecord.ts
 
 export default {
   title: 'Study Record',
@@ -6,26 +6,31 @@ export default {
   type: 'document',
   fields: [
     {
-      title: 'User',
-      name: 'user',
-      type: 'reference',
-      to: {type: 'user'},
+      title: 'Room Key',
+      name: 'roomKey',
+      type: 'string',
     },
     {
-      title: 'Room',
-      name: 'room',
-      type: 'reference',
-      to: {type: 'room'},
-    },
-    {
-      title: 'Check In Days',
-      name: 'checkInDays',
+      title: 'Study Records',
+      name: 'studyRecords',
       type: 'number',
     },
     {
-      title: 'Accumulated Study Time',
-      name: 'accumulatedStudyTime',
+      title: 'Weekly Records',
+      name: 'weeklyRecords',
       type: 'number',
+    },
+    {
+      title: 'Check In Dates',
+      name: 'checkInDates',
+      type: 'array',
+      of: [{type: 'datetime'}],
+    },
+    {
+      title: 'Check In Time',
+      name: 'checkInTime',
+      type: 'array',
+      of: [{type: 'datetime'}],
     },
   ],
 }

@@ -6,14 +6,26 @@ export default {
   type: 'document',
   fields: [
     {
+      title: 'Mode',
+      name: 'mode',
+      type: 'string',
+      options: {
+        list: [
+          {value: 'study', title: 'Study Mode'},
+          {value: 'personal', title: 'Personal Study Mode'},
+          {value: 'arena', title: 'Arena Mode'},
+        ],
+      },
+    },
+    {
       title: 'Room Name',
       name: 'roomName',
       type: 'string',
       validation: (Rule: Rule) => Rule.required().error('방 제목은 필수 항목입니다.'),
     },
     {
-      title: 'Invite Code',
-      name: 'inviteCode',
+      title: 'Room Key',
+      name: 'roomKey',
       type: 'string',
       validation: (Rule: Rule) => Rule.required().error('초대 코드는 필수 항목입니다.'),
     },

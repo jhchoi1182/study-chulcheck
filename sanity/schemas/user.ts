@@ -18,10 +18,21 @@ export default {
       validation: (Rule: Rule) => Rule.required().error('이름은 필수 항목입니다.'),
     },
     {
+      title: 'Nick Name',
+      name: 'nickName',
+      type: 'string',
+    },
+    {
       title: 'Rooms',
       name: 'rooms',
       type: 'array',
       of: [{type: 'reference', to: {type: 'room'}}],
+    },
+    {
+      title: 'Study Records',
+      name: 'studyRecords',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'studyRecord'}}],
     },
   ],
 }

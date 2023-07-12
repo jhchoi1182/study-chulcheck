@@ -1,6 +1,5 @@
-import WeeklyRecord from './WeeklyRecord'
-import StudyRecord from './StudyRecord'
-import room from './room'
+import studyRecord from './studyRecord'
 import user from './user'
+import room from './room'
 
-export const schemaTypes = [user, room, StudyRecord, WeeklyRecord]
+export const schemaTypes = [user, room, studyRecord]
