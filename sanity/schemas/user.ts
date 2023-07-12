@@ -9,7 +9,7 @@ export default {
       title: 'ID',
       name: 'id',
       type: 'string',
-      validation: (Rule: Rule) => Rule.unique().error('아이디는 고유해야 합니다.'),
+      validation: (Rule: Rule) => Rule.required().error('아이디는 필수 항목입니다.'),
     },
     {
       title: 'Name',

@@ -6,10 +6,16 @@ export default {
   type: 'document',
   fields: [
     {
+      title: 'Room Name',
+      name: 'roomName',
+      type: 'string',
+      validation: (Rule: Rule) => Rule.required().error('방 제목은 필수 항목입니다.'),
+    },
+    {
       title: 'Invite Code',
       name: 'inviteCode',
       type: 'string',
-      validation: (Rule: Rule) => Rule.unique().error('초대 코드는 고유해야 합니다.'),
+      validation: (Rule: Rule) => Rule.required().error('초대 코드는 필수 항목입니다.'),
     },
     {
       title: 'Check In Time',
@@ -31,6 +37,8 @@ export default {
       name: 'members',
       type: 'array',
       of: [{type: 'reference', to: {type: 'user'}}],
+      validation: (Rule: Rule) =>
+        Rule.required().error('방에는 최소 한 명의 멤버가 있어야 합니다.'),
     },
   ],
 }
