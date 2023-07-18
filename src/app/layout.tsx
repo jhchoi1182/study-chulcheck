@@ -1,7 +1,9 @@
+import SideBar from "@/components/organisms/SideBar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Electrolize, Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const electrolize = Electrolize({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "StudySync",
@@ -11,9 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <head></head>
-        {children}</body>
+      <body className={`${inter.className} flex items-center bg-midnight text-white h-[928px]`}>
+        <SideBar />
+        {children}
+      </body>
     </html>
   );
 }

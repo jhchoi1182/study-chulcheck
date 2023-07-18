@@ -6,6 +6,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {},
+      colors: {
+        "midnight": "#2c3e50",
+        "riseshine": "#fbc531",
+      }
     },
   },
   plugins: [],
