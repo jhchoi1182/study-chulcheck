@@ -1,5 +1,5 @@
 import { MainSideBar } from "@/components/molecules/sidebar";
-import { RankingBoard } from "@/components/organisms/board";
+import { RankingBoard, RoomBoard } from "@/components/organisms/board";
 import React from "react";
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
       {/* <div className="h-full py-[77px]"> */}
       <RankingBoard />
       {/* </div> */}
+      <RoomBoard />
     </main>
   );
 }

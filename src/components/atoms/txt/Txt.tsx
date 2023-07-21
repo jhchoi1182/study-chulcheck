@@ -1,17 +1,20 @@
-import { FLEX_CENTER } from "@/util/styles";
 import { HTMLAttributes } from "react";
 
 interface TxtProps extends HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
-  icon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
+  rigthIcon?: React.ReactNode;
+  center?: boolean;
   size?: "medium";
-  color?: "white" | "black";
+  color?: "white" | "black" | "riseshine";
   onClick?: () => void;
 }
 
 export default function Txt({
   children,
-  icon,
+  leftIcon,
+  rigthIcon,
+  center,
   size = "medium",
   color = "white",
   className,
@@ -19,11 +22,16 @@ export default function Txt({
 }: TxtProps) {
   return (
     <div
-      className={`${FLEX_CENTER} cursor-pointer ${TYPOGRAPH_VARIANT[size]} ${FONT_VARIANT[color]} ${className}`}
+      className={`flex items-center ${
+        center && "justify-center"
+      } cursor-pointer ${TYPOGRAPH_VARIANT[size]} ${
+        FONT_VARIANT[color]
+      } ${className}`}
       {...props}
     >
-      {icon && <span className="mr-[10px]">{icon}</span>}
+      {leftIcon && <span className="mr-[10px]">{leftIcon}</span>}
       <span>{children}</span>
+      {rigthIcon && <span className="ml-[10px]">{rigthIcon}</span>}
     </div>
   );
 }
@@ -31,6 +39,7 @@ export default function Txt({
 const FONT_VARIANT = {
   white: "text-white",
   black: "text-black",
+  riseshine: "text-riseshine",
 };
 
 const TYPOGRAPH_VARIANT = {

@@ -1,6 +1,6 @@
 import { Board } from "@/components/atoms/board";
 import { Tab } from "@/components/atoms/button";
-import { UserList } from "@/components/molecules/userList";
+import { UserList } from "@/components/molecules/list";
 import React from "react";
 
 export default function RankingBoard() {

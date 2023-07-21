@@ -12,7 +12,7 @@ export default function MainSideBar() {
       <div className="flex flex-col justify-around items-center h-[500px]">
         <Txt>스터디 룸 만들기</Txt>
         <Txt>스터디 룸 참가하기</Txt>
-        <Txt icon={<PiCrownDuotone className="text-riseshine" />}>
+        <Txt leftIcon={<PiCrownDuotone className="text-riseshine" />}>
           아레나 참가하기
         </Txt>
       </div>
