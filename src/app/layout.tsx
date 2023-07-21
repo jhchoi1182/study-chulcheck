@@ -1,4 +1,3 @@
-import SideBar from "@/components/organisms/SideBar";
 import "./globals.css";
 import { Electrolize, Inter } from "next/font/google";
 
@@ -13,10 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex items-center bg-midnight text-white h-[928px]`}>
-        <SideBar />
-        {children}
-      </body>
+      <body className={`${inter.className} bg-midnight`}>{children}</body>
     </html>
   );
 }

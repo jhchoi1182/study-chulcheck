@@ -1,10 +1,10 @@
 import React from "react";
-import { Logo } from "../atoms/icons";
-import Button from "../atoms/button/Button";
-import { Txt } from "../atoms/txt";
+import { Logo } from "../../atoms/icons";
+import { Txt } from "../../atoms/txt";
 import { PiCrownDuotone } from "react-icons/pi";
+import { Button } from "@/components/atoms/button";
 
-export default function SideBar() {
+export default function MainSideBar() {
   return (
     <section className="flex flex-col items-center basis-1/3">
       <Logo />
@@ -12,7 +12,9 @@ export default function SideBar() {
       <div className="flex flex-col justify-around items-center h-[500px]">
         <Txt>스터디 룸 만들기</Txt>
         <Txt>스터디 룸 참가하기</Txt>
-        <Txt icon={<PiCrownDuotone className="text-riseshine" />}>아레나 참가하기</Txt>
+        <Txt icon={<PiCrownDuotone className="text-riseshine" />}>
+          아레나 참가하기
+        </Txt>
       </div>
     </section>
   );
