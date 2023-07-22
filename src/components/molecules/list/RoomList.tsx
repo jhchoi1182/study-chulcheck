@@ -1,8 +1,9 @@
 "use client";
 
-import { Txt } from "@/components/atoms/txt";
+import { Text } from "@/components/atoms/text";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { TextWithIcon } from "../text";
 
 const mock = {
   data: {
@@ -36,17 +37,17 @@ export default function RoomList() {
         return (
           <li
             key={i}
-            className="flex flex-col w-[289px] h-[163px] mb-7 bg-midnight rounded-lg cursor-pointer shadow-md hover:shadow-slate-400"
+            className="flex flex-col w-[289px] h-[163px] mb-7 bg-midnight rounded-lg cursor-pointer shadow-md hover:shadow-xl"
             onClick={enterRoom}
           >
             <span className="p-4 text-riseshine">{Mode[mode]}</span>
             <div className="p-4">
-              <Txt>{roomName}</Txt>
+              <Text>{roomName}</Text>
             </div>
             <button className="self-end mt-auto pb-4 pr-4">
-              <Txt color="riseshine" rigthIcon={<AiOutlineArrowRight />}>
+              <TextWithIcon textColor="riseshine" rightIcon={<AiOutlineArrowRight className="text-riseshine" />}>
                 입장
-              </Txt>
+              </TextWithIcon>
             </button>
           </li>
         );

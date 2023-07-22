@@ -7,7 +7,7 @@ export default function RankingBoard() {
   return (
     <Board isTab>
       <Tab />
-      <UserList number={10} />
+      <UserList />
     </Board>
   );
 }
