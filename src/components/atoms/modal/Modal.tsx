@@ -1,26 +1,6 @@
 "use client";
 
 import { useModalStore } from "@/libs/zustand";
-import { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-
-interface ModalProps {
-  children: React.ReactNode;
-}
-
-export function Portal({ children }: ModalProps) {
-  const [element, setElement] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    setElement(document.getElementById("portal"));
-  }, []);
-
-  if (!element) {
-    return;
-  }
-
-  return ReactDOM.createPortal(children, element);
-}
 
 interface ModalBackDropProps extends React.HTMLAttributes<HTMLDivElement> {
   notClose?: boolean;
