@@ -1,6 +1,6 @@
-import { LoginModal } from "@/components/molecules/modal";
 import { MainSideBar } from "@/components/molecules/sidebar";
 import { RankingBoard, RoomBoard } from "@/components/organisms/board";
+import LoginModal from "@/components/organisms/modal/LoginModal";
 import React from "react";
 
 export default function Home() {

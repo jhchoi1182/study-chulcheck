@@ -2,7 +2,9 @@
 
 import { create } from "zustand";
 
-type ModalType = "close" | "open" | "login" | "signup";
+declare global {
+  type ModalType = "close" | "open" | "login" | "signup";
+}
 
 interface ModalState {
   modalType: ModalType;
