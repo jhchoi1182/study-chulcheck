@@ -6,7 +6,6 @@ import { HTMLAttributes, ReactElement, cloneElement } from "react";
 interface LabelWithInputProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactElement;
   label: string;
-  onClick?: () => void;
 }
 
 export default function Input({ label, children, ...props }: LabelWithInputProps) {

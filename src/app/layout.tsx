@@ -1,3 +1,4 @@
+import AuthContext from "@/context/AuthContext";
 import "./globals.css";
 import { Electrolize, Inter } from "next/font/google";
 
@@ -17,8 +18,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-midnight`}>
-        {children}
-        <div id="portal" />
+        <AuthContext>
+          {children}
+          <div id="portal" />
+        </AuthContext>
       </body>
     </html>
   );
