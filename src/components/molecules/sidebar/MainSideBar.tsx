@@ -12,7 +12,6 @@ import { signOut, useSession } from "next-auth/react";
 export default function MainSideBar() {
   const { setModalType } = useModalStore();
   const { data: session } = useSession();
-  console.log(session);
 
   return (
     <section className="flex flex-col items-center basis-1/3">

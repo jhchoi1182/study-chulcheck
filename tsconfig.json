@@ -31,7 +31,8 @@
     "sanity/schemas/room.ts",
     "sanity/schemas/StudyRecord.ts",
     "sanity/schemas/user.ts",
-    "sanity/schemas/WeeklyRecord.ts"
+    "sanity/schemas/WeeklyRecord.ts",
+    "src/tests/__mocks__/next-auth/react.ts"
   ],
   "exclude": ["node_modules", "sanity-studio"]
 }

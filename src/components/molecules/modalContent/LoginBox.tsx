@@ -28,7 +28,12 @@ export default function LoginBox({ setModalType }: LoginBoxProps) {
       </div>
       <div className="flex gap-28">
         <GoogleIcon onClick={() => signIn("google")} />
-        <BsGithub size={45} className="text-white" onClick={() => signIn("github")} />
+        <BsGithub
+          aria-label="github"
+          size={45}
+          className="text-white cursor-pointer"
+          onClick={() => signIn("github")}
+        />
       </div>
     </div>
   );
