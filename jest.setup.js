@@ -9,7 +9,7 @@ import { server } from "./src/tests/msw/server";
 beforeAll(() => server.listen());
 
 afterEach(() => {
-  jest.resetAllMocks();
+  jest.clearAllMocks();
   server.resetHandlers();
 });
 

@@ -1,16 +1,42 @@
-export const useSessionMock = jest.fn();
+export const SessionProvider = ({ children }: { children: React.ReactNode }) => children;
+export const useSession = jest.fn();
+export const signIn = jest.fn();
 
-const originalModule = jest.requireActual("next-auth/react");
-
-const mockSession = {
-  user: { username: "test" },
-  expires: new Date(Date.now() + 86400 * 1000).toISOString(),
+let mockSessionValue: MockValue = {
+  data: {
+    user: {
+      name: "고야",
+      email: "yhhnnmm@gmail.com",
+    },
+    expires: new Date(Date.now() + 86400 * 1000).toISOString(),
+  },
 };
 
-useSessionMock.mockReturnValue({ data: mockSession, status: "authenticated" });
+useSession.mockImplementation(() => mockSessionValue);
 
-export const useSession = useSessionMock;
+signIn.mockImplementation((provider) => {
+  mockSessionValue = {
+    data: {
+      user: {
+        name: "고야",
+        email: "yhhnnmm@gmail.com",
+      },
+      expires: new Date(Date.now() + 86400 * 1000).toISOString(),
+    },
+  };
+  return Promise.resolve();
+});
 
-export const SessionProvider = ({ children }: { children: React.ReactNode }) => children;
+interface MockValue {
+  data: {
+    user: {
+      name: string;
+      email: string;
+    };
+    expires: string;
+  } | null;
+}
 
-export default originalModule;
+export const setMockSessionValue = (newValue: MockValue) => {
+  mockSessionValue = newValue;
+};
