@@ -15,13 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "schemas/room.ts",
-    "schemas/studyRecord.ts",
-    "schemas/user.ts",
-    "schemas/weeklyRecord.ts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

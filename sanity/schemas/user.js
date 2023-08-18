@@ -1,5 +1,3 @@
-import {Rule} from '@sanity/types'
-
 export default {
   title: 'User',
   name: 'user',
@@ -9,13 +7,13 @@ export default {
       title: 'ID',
       name: 'id',
       type: 'string',
-      validation: (Rule: Rule) => Rule.required().error('아이디는 필수 항목입니다.'),
+      validation: (Rule) => Rule.required().error('아이디는 필수 항목입니다.'),
     },
     {
       title: 'Name',
       name: 'name',
       type: 'string',
-      validation: (Rule: Rule) => Rule.required().error('이름은 필수 항목입니다.'),
+      validation: (Rule) => Rule.required().error('이름은 필수 항목입니다.'),
     },
     {
       title: 'Nick Name',
